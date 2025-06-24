@@ -331,8 +331,7 @@ def parse_args(argv=None):
                         help='Choose task as ori or dest')
     parser.add_argument('-data', default='hk', type=str,
                         help='Choose task as hk or hz')
-    parser.add_argument('--data', default='', type=str,
-                        help='Choose the dataset')
+
     global args
     args = parser.parse_args(argv)
 # python train_dm.py -task ori -data hk -device cuda:0
