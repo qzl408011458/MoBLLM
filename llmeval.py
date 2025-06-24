@@ -131,20 +131,9 @@ if __name__ == '__main__':
     df['ground_truth'] = df['ground_truth'].apply(lambda x: int(x))
 
 
-    hall_rate = len(df[df['prediction'] == -100]) / len(df) * 100
-
-    if len(df[df['prediction'] == -100]) != 0:
-        print('hall example index:')
-        print(df[df['prediction'] == -100].index)
 
     acc1, f1 = get_acc1_f1(df)
     print('sample size:', len(df))
-    print("Acc@1: ", acc1)
-    print("F1: ", f1)
-    print('Hallucination rate: ', hall_rate)
     print(F'acc, F1: {acc1 * 100:.2f}, {f1:.4f}' )
 
-    print(f'acc, hall_rate: {acc1 * 100:.2f}, {hall_rate:.2f}')
-    print('--------------')
-
-    print(f'acc, f1, hall_rate: {acc1 * 100:.2f}, {f1:.4f}, {hall_rate:.2f}')
+ 
