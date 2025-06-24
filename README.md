@@ -1,6 +1,7 @@
 ## MoBLLM
 
 This is the repository for the paper "A Foundational Individual Mobility Prediction Model based on Open-Source Large Language Models".
+(Preprint link: https://arxiv.org/abs/2503.16553)
 
 ## Data Preparation
 We provide processed datasets used in the experiments at the following link: 
