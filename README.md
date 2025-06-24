@@ -52,6 +52,18 @@ python run_llm-mob-ori.py --data ori_hk
 Evaluation of deep learning models under normal condition is also conducted in their trainig, see the Section of **Deep Learning Baseline Training**
 
 ### Evaluation under Special Condition
+Evaluating the MoBLLM (fine tuned by oLoRA) on the ori_network_change dataset is as follows:
+```python
+python run_mobllm-ori.py --data ori_hk_network_change --ft_path {fine-tuned model path} --ft_name olora
+```
+
+Evaluating the LLM-Mob on the dest_network_change dataset is as follows:
+```python
+python run_llm-mob-dest.py --data dest_hk_network_change
+```
+
+Evaluation of deep learning models under special conditions needs well training on the HK metro data and then can be executed by the three .py files with _dleval_ (dleval_dm.py, dleval_mhsa.py, dleval_mob.py) 
+with small modifications (e.g., the trained checkpoint path and the option of specific evaluation dataset)
 
 
 
