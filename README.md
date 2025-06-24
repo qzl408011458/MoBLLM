@@ -8,8 +8,11 @@ https://drive.google.com/file/d/1TYH288GSErSIBQM8rR6qR6IBytVGznBV/view?usp=drive
 
 Download and unzip the data in the main folder, then finish the data preparation.
 (note that the relationship between the abbr. in dataname and corresponding dataset, i.e.,
+
 fsq: Foursquare New York; fsq_tky: Foursquare Tokyo; fsq_global: Foursquare global; geolife: Microsoft Geolife;
+
 ori_hk, dest_hk: Hong Kong metro trip data of origin and destination; ori_hz, dest_hz: Hangzhou metro trip data of origin and destination;
+
 data with network_change, event, incident or intervention involves in the names are the Hong Kong metro trip data of the four special scenarios.
 )
 
