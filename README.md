@@ -36,8 +36,24 @@ python train_dm.py -data hk -task ori
 ## Model Evaluation
 This section includes the evaluation of MoBLLM, LLM-Mob and the deep learning baselines DeepMove, MHSA, MobTCast for individual mobility prediction under normal and special conditions.
 
+The datasets with normal condition include fsq, fsq_tky, fsq_global, geolife, ori_hk, dest_hk, ori_hz and dest_hz. The others are with special condtions.
+
 ### Evaluation under Normal Condition
-Evaluating 
+Evaluating the MoBLLM (fine tuned by oLoRA) on the fsq dataset is as follows:
+```python
+python run_mobllm-poi.py --data fsq --ft_path {fine-tuned model path} --ft_name olora
+```
+
+Evaluating the LLM-Mob on the HK-ORI dataset is as follows:
+```python
+python run_llm-mob-ori.py --data ori_hk
+```
+
+Evaluation of deep learning models under normal condition is also conducted in their trainig, see the Section of **Deep Learning Baseline Training**
+
+### Evaluation under Special Condition
+
+
 
 
 
