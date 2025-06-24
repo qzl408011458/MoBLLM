@@ -7,6 +7,7 @@ We provide processed datasets used in the experiments at the following link:
 https://drive.google.com/file/d/1TYH288GSErSIBQM8rR6qR6IBytVGznBV/view?usp=drive_link
 
 Download and unzip the data in the main folder, then finish the data preparation.
+
 (note that the relationship between the abbr. in dataname and corresponding dataset, i.e.,
 
 fsq: Foursquare New York; fsq_tky: Foursquare Tokyo; fsq_global: Foursquare global; geolife: Microsoft Geolife;
