@@ -62,7 +62,7 @@ Evaluating the LLM-Mob on the dest_network_change dataset is as follows:
 python run_llm-mob-dest.py --data dest_hk_network_change
 ```
 
-Evaluation of deep learning models under special conditions needs well training on the HK metro data and then can be executed by the three .py files with _dleval_ (dleval_dm.py, dleval_mhsa.py, dleval_mob.py) 
+Evaluation of deep learning models under special conditions needs well training on the HK metro data and then can be executed by the three .py files with head of _dleval_ (dleval_dm.py, dleval_mhsa.py, dleval_mob.py) 
 with small modifications (e.g., the trained checkpoint path and the option of specific evaluation dataset)
 
 
