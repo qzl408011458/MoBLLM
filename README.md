@@ -38,6 +38,8 @@ This section includes the evaluation of MoBLLM, LLM-Mob and the deep learning ba
 
 The datasets with normal condition include fsq, fsq_tky, fsq_global, geolife, ori_hk, dest_hk, ori_hz and dest_hz. The others are with special condtions.
 
+Note that the evaluation results of LLM based models (MoBLLM, LLM-Mob) are obtained by running llmeval.py with the path of result folder (e.g., )
+
 ### Evaluation under Normal Condition
 Evaluating the MoBLLM (fine tuned by oLoRA) on the fsq dataset is as follows:
 ```python
