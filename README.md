@@ -12,9 +12,16 @@ Download and unzip the data in the main folder, then finish the data preparation
 This section includes the training of MoBLLM and the deep learning baseline models.
 ### MoBLLM Fine-Tuning
 We provide the MoBLLM training realized by LoRA and its several advanced variants including OLoRA, EVA, PiSSA, LoftQ, LoRA+, rsLoRA and QLoRA.
-For example, the MoBLLM is fine tuned by OLoRA method:
+For example, the MoBLLM fine tuned by OLoRA method can be executed by the following command:
 ```python
 python llmtrain_olora.py
+```
+
+### Deep Learning Baseline Training
+We provide the training of SOTA deep learning models DeepMove, MHSA, MobTCast in individual mobility prediciton. 
+For example, training DeepMove on HK-ORI dataset can be executed by the following command:
+```python
+python train_dm.py --data hk, 
 ```
 
 
