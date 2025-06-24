@@ -1,0 +1,12 @@
+You are asked to come up with a set of 10 diverse task instructions related to time series prediction. These task instructions will be given to a GPT model and we will evaluate the GPT model for completing the instructions.
+
+Here are the requirements:
+1. The instructions should be in English.
+2. Each generated instruction should be as long as the given example instruction. Give the corresponding task title before generating the instruction.
+3. Assuming that you are a mobility research scientist, each generated instruction should be related to human mobility prediction, e.g., predict next location or next trip station.
+4. The language used for the instruction also should be diverse. For example, you should combine questions with imperative instructions.
+5. A GPT language model should be able to complete the instruction. For example, do not ask the assistant to create any visual or audio output.
+6. The main structure of an instruction should include <task definition>, <data description> and <thinking guidance>.
+7. <data description> have and only have 4 elements of a stay that can be illustrated: start_time, day_of_week, duration, place.
+
+List of 10 tasks:

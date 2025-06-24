@@ -1,0 +1,21 @@
+<task definition>
+Your task is to predict a user's next location based on his/her activity pattern.
+
+<data description>
+You will be provided with <history> which is a list containing this user's historical stays, then <context> which provide contextual information
+about where and when this user have been to recently.
+
+Stays in both <history> and <context> are in chronological order. Each stay takes on such form as (start_time, day_of_week, place). The detailed explanation of each element is as follows:
+start_time: the start time of the stay in 12h clock format.
+day_of_week: indicating the day of the week.
+place: an integer or a name representing the unique place, which indicates where the stay is.
+
+Stay in <target> takes a form as (start_time, day_of_week, None, <next_place>)
+Then you need to do next location prediction on <target_stay> which is the prediction target with unknown place denoted as <next_place> and unknown duration denoted as None, while temporal information is provided.
+
+<thinking guidance>
+Please infer what the <next_place> is (i.e., the most likely place), considering the following aspects:
+1. the activity pattern of this user that you learned from <history>, e.g., repeated visit to a certain place during certain time;
+2. the context stays in <context>, which provide more recent activities of this user;
+3. the temporal and spatial information (i.e., start_time, day_of_week) of target stay, which is important because people's activity varies during different times (e.g., nighttime versus daytime),
+and on different days (e.g., weekday versus weekend), and different places (e.g., central business district versus residential district)
