@@ -7,7 +7,7 @@ This is the repository for the paper "A Foundational Individual Mobility Predict
 The virtual environment is created and activated by:
 ```
 conda env create -f environment.yml
-conda activate llm_dev
+conda activate mobllm
 ```
 
 ## Data Preparation
