@@ -1,4 +1,4 @@
-name: llm_dev
+name: mobllm
 channels:
   - pytorch
   - nvidia
