@@ -184,12 +184,10 @@ def train():
     import torch
     from peft import LoraConfig, TaskType, get_peft_model
 
-
     # 1. create instruction FT dataset
     ds = load_dataset()
     print('Dataset is loaded successfully!')
     print('##############################################################################################')
-
 
     # 2. load model configurations
     MODEL_ID = "LoftQ/Meta-Llama-3-8B-Instruct-4bit-64rank"
@@ -200,6 +198,7 @@ def train():
     base_model = AutoModelForCausalLM.from_pretrained(
         MODEL_ID,
         torch_dtype=torch.bfloat16,  # you may change it with different pretrain_models
+        # device_map='cuda',
         quantization_config=BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_compute_dtype=torch.bfloat16,  # bfloat16 is recommended
@@ -228,13 +227,13 @@ def train():
     # )
 
     # 5. load lora adapter
-    model.enable_input_require_grads() # 开启梯度检查点时，要执行该方法
+    model.enable_input_require_grads()  # 开启梯度检查点时，要执行该方法
     # model = get_peft_model(model, config)
     model.print_trainable_parameters()
 
     # 6. configure fine-tuning parameters and train model
     args = TrainingArguments(
-        output_dir="modelSave/llama3_instruct-4bit-64rank_loftq",
+        output_dir="modelSave/llama3_instruct-4bit-64rank_loftq_1",
         per_device_train_batch_size=3,
         gradient_accumulation_steps=3,
         logging_steps=10,
