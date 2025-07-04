@@ -204,7 +204,7 @@ def train():
                                               use_fast=False, trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
     model = AutoModelForCausalLM.from_pretrained('meta-llama/Meta-Llama-3.1-8B-Instruct',
-                                                 device_map="auto", torch_dtype=torch.bfloat16, use_cache=False)
+                                                 device_map="cuda", torch_dtype=torch.bfloat16, use_cache=False)
     # 3. tokenize dataset
     tokenized_id = ds.map(process_func, remove_columns=ds.column_names)
 

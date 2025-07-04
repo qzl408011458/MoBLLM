@@ -544,11 +544,8 @@ def main():
                 bnb_4bit_use_double_quant=True,
                 bnb_4bit_compute_dtype=torch.bfloat16
             )
-            if '70B' in args.ft_path:
-                tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3.3-70B-Instruct',
-                                                          use_fast=False, trust_remote_code=True)
-            else:
-                tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+
+            tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 
             tokenizer.pad_token = tokenizer.eos_token
             model = AutoModelForCausalLM.from_pretrained(model_path,

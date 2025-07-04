@@ -202,7 +202,7 @@ def train():
                                               use_fast=False, trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
     model = AutoModelForCausalLM.from_pretrained('meta-llama/Meta-Llama-3.1-8B-Instruct',
-                                                 device_map="auto", #torch_dtype=torch.bfloat16,
+                                                 device_map="cuda", #torch_dtype=torch.bfloat16,
                                                  use_cache=False,
                                                  quantization_config=nf4_config)
 
