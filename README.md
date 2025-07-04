@@ -3,6 +3,13 @@
 This is the repository for the paper "A Foundational Individual Mobility Prediction Model based on Open-Source Large Language Models".
 (Preprint link: https://arxiv.org/abs/2503.16553)
 
+## Environment Preparation
+The virtual environment is created and activated by:
+```
+conda env create -f environment.yml
+conda activate llm_dev
+```
+
 ## Data Preparation
 We provide processed datasets used in the experiments at the following link: 
 https://drive.google.com/file/d/1TYH288GSErSIBQM8rR6qR6IBytVGznBV/view?usp=drive_link
